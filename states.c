@@ -28,8 +28,6 @@ State state_scale(State Y, double v) {
     return result;
 }
 
-// Equations:  https://www.physics.usyd.edu.au/~wheat/dpend_html/
-// Derivation: https://scienceworld.wolfram.com/physics/DoublePendulum.html
 State derivatives(State Y, Pendulum p1, Pendulum p2) {
     double delta = Y.theta2 - Y.theta1;
     double omega1_sqrd = Y.omega1 * Y.omega1;
@@ -52,7 +50,6 @@ State derivatives(State Y, Pendulum p1, Pendulum p2) {
     return dYdt;
 }
 
-// Explanation: https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods
 State rk4(State Y, double dt, Pendulum p1, Pendulum p2) {
     State k1 = derivatives(Y, p1, p2);
     State k2 = derivatives(state_add(Y, state_scale(k1, dt/2)), p1, p2);
