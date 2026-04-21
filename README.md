@@ -8,8 +8,9 @@ Visualize the chaotic motion of a double pendulum system.
 DoublePendulum/
 ├── media/
 │ └── demo.gif
-├── double_pendulum.c 
+├── .gitignore
 ├── LICENSE
+├── double_pendulum.c 
 ├── makefile
 ├── raygui.h
 ├── README.md
@@ -50,17 +51,27 @@ The simulation is based on the Lagrangian mechanics derivation for a double pend
 
 The state of the system at any given moment is defined by four variables: 
 
-$$Y = \begin{bmatrix} 
-\theta_1 \\ \omega_1 \\ \theta_2 \\ \omega_2 
-\end{bmatrix}$$
+$$
+Y = \begin{bmatrix} 
+\theta_1 \\ 
+\omega_1 \\ 
+\theta_2 \\ 
+\omega_2 
+\end{bmatrix}
+$$
 
 Where $\theta$ is the angle and $\omega$ is the angular velocity for each pendulum.
 
 To find the next state, the program calculates the derivatives of the values in $Y$, which acts as the mathematical function $f(t, Y)$ for RK4:
 
-$$\dot{Y} = f(t, Y) = \begin{bmatrix} 
-\omega_1 \\ \alpha_1 \\ \omega_2 \\ \alpha_2 
-\end{bmatrix}$$
+$$
+\dot{Y} = f(t, Y) = \begin{bmatrix} 
+\omega_1 \\ 
+\alpha_1 \\ 
+\omega_2 \\ 
+\alpha_2 
+\end{bmatrix}
+$$
 
 Where $\alpha$ is the angular acceleration for each pendulum.
 
