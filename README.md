@@ -24,7 +24,7 @@ DoublePendulum/
 - Press "Start". The simulation will draw the path followed by both pendulums.
 - Press "Reset" to reset the state.
 
-<!-- ![Demo of the Program](./media/demo.gif) -->
+![Demo of the Program](./media/demo.gif)
 
 
 ## Requirements:
